@@ -6,7 +6,7 @@ import styles from './styles';
 // component called CarItem - will be reused
 const CarItem = (props) => {
 
-  const { name, tagline, taglineCTA, image } = props;
+  const { name, tagline, taglineCTA, image } = props.car;
 
   return (
     <View style = {styles.carContainer}>
@@ -19,7 +19,8 @@ const CarItem = (props) => {
         <View style = {styles.titles}>
           <Text style = {styles.title}>{name}</Text>
           <Text style = {styles.subtitle}>
-          {tagline} {' '}
+          {tagline} 
+          {' '}
           <Text style={styles.taglineCTA}>
             {taglineCTA}
           </Text>
